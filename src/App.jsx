@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-
+import API_BASE_URL from './config';
 function App() {
     const [question1, setQuestion1] = useState('');
     const [question2, setQuestion2] = useState('');
@@ -22,7 +22,7 @@ function App() {
 
         try {
             // Send question1 and question2 to the Flask backend
-            const response = await axios.post('http://127.0.0.1:5000/predict', {
+            const response = await axios.post(API_BASE_URL, {
                 question1: question1,
                 question2: question2
             });
@@ -78,7 +78,7 @@ function App() {
 
             {isClicked && prediction !== null && (
                 <h2 className="text-center text-lg font-bold m-5">
-                    {prediction ? 'Duplicate' : 'Non-Duplicate'}
+                    {prediction == '1' ? 'Duplicate' : 'Non-Duplicate'}
                 </h2>
             )}
         </div>
