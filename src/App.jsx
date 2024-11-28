@@ -46,11 +46,11 @@ function App() {
 
             {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-            <form onSubmit={predictionForm} className="flex-col justify-center align-middle m-auto mt-10 w-1/2">
+            <form onSubmit={predictionForm} className="flex-col justify-center align-middle m-10 sm:m-auto sm:mt-20 w-1/2">
                 <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900">Question 1</label>
                     <input
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 m-5"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 sm:w-full p-2.5 m-5"
                         type="text"
                         placeholder="Enter Question 1"
                         value={question1}
@@ -60,7 +60,7 @@ function App() {
                 <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900">Question 2</label>
                     <input
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 m-5"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 sm:w-full p-2.5 m-5"
                         type="text"
                         placeholder="Enter Question 2"
                         value={question2}
