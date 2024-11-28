@@ -31,7 +31,7 @@ function App() {
             setQuestion1('');
             setQuestion2('');
         } catch (error) {
-          setError('An error occurred while predicting');
+          setError(error);
         } finally {
             setLoading(false);  // Set loading to false after the request is completed
         }
