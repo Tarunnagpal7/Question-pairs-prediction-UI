@@ -46,7 +46,7 @@ function App() {
 
             {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-            <form onSubmit={predictionForm} className="flex-col justify-center align-middle m-10 sm:m-auto sm:mt-20 w-1/2">
+            <form onSubmit={predictionForm} className="flex-col justify-center align-middle ml-2 mt-5 sm:m-auto sm:mt-20 w-1/2">
                 <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900">Question 1</label>
                     <input
