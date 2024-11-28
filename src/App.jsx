@@ -22,7 +22,7 @@ function App() {
 
         try {
             // Send question1 and question2 to the Flask backend
-            const response = await axios.post(`${API_BASE_URL}/predict/predict`, {
+            const response = await axios.post(`${API_BASE_URL}/predict`, {
                 question1: question1,
                 question2: question2
             });
@@ -30,8 +30,9 @@ function App() {
             setPrediction(response.data.prediction); // Set prediction data
             setQuestion1('');
             setQuestion2('');
-        } catch (error) {
-          setError("An error occur while prediction")
+        } catch (err) {
+            console.error("Error:", err);
+            setError(err.response?.data?.message || "Something went wrong. Please try again.");
         } finally {
             setLoading(false);  // Set loading to false after the request is completed
         }
