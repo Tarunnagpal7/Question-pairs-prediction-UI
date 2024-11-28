@@ -22,7 +22,7 @@ function App() {
 
         try {
             // Send question1 and question2 to the Flask backend
-            const response = await axios.post(API_BASE_URL, {
+            const response = await axios.post(`${API_BASE_URL}/predict`, {
                 question1: question1,
                 question2: question2
             });
