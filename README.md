@@ -46,10 +46,10 @@ Ensure you have the following installed:
 
    Create a config.js file in the src directory.
    Add the following content and replace <BACKEND_API_URL> with the URL of your backend:
+     ```bash
+      const API_BASE_URL = "<BACKEND_API_URL>";
+      export default API_BASE_URL;
 
-   const API_BASE_URL = "<BACKEND_API_URL>";
-   export default API_BASE_URL;
-   
 4. start your server
 
     npm start
@@ -60,7 +60,7 @@ Ensure you have the following installed:
 
   The application will be available at http://localhost:3000 by default.
 
-## Folder Structure
+# Folder Structure
 
 src/
 ├── components/      # Reusable components
@@ -71,7 +71,7 @@ src/
 └── styles/          # Tailwind CSS configuration
 
 
-##Usage
+# Usage
    - Open the application in your browser.
    - Enter two questions in the respective input fields.
    - Click the Predict button.
