@@ -37,3 +37,43 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/duplicate-question-pairs-frontend.git
    cd duplicate-question-pairs-frontend
+2. Install dependencies
+   
+      npm install
+      # or
+      yarn install
+3. Setup your backend API
+
+   Create a config.js file in the src directory.
+   Add the following content and replace <BACKEND_API_URL> with the URL of your backend:
+
+   const API_BASE_URL = "<BACKEND_API_URL>";
+   export default API_BASE_URL;
+   
+4. start your server
+
+    npm start
+    # or
+    yarn start
+    
+5. Open the application in your browser:
+
+  The application will be available at http://localhost:3000 by default.
+
+## Folder Structure
+
+src/
+├── components/      # Reusable components
+├── pages/           # Page-level components
+├── App.js           # Main app file
+├── index.js         # Entry point
+├── config.js        # Backend API URL
+└── styles/          # Tailwind CSS configuration
+
+
+##Usage
+   - Open the application in your browser.
+   - Enter two questions in the respective input fields.
+   - Click the Predict button.
+   - The application will display if the questions are Duplicate or Non-Duplicate.
+
