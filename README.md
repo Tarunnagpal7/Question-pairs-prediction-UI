@@ -61,14 +61,14 @@ Ensure you have the following installed:
   The application will be available at http://localhost:3000 by default.
 
 # Folder Structure
-
-src/
-├── components/      # Reusable components
-├── pages/           # Page-level components
-├── App.js           # Main app file
-├── index.js         # Entry point
-├── config.js        # Backend API URL
-└── styles/          # Tailwind CSS configuration
+      ```
+      src/
+      ├── components/      # Reusable components
+      ├── pages/           # Page-level components
+      ├── App.js           # Main app file
+      ├── index.js         # Entry point
+      ├── config.js        # Backend API URL
+      └── styles/          # Tailwind CSS configuration
 
 
 # Usage
