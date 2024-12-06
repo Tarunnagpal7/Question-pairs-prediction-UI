@@ -46,36 +46,40 @@ function App() {
 
             {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-            <form onSubmit={predictionForm} className="flex-col justify-center align-middle ml-2 mt-5 sm:m-auto sm:mt-20 w-1/2">
-                <div>
+            <form 
+                onSubmit={predictionForm} 
+                className="flex flex-col items-center mx-auto mt-10 sm:mt-20 w-full max-w-md p-5 sm:p-10 bg-white rounded-lg shadow-md"
+                >
+                <div className="w-full mb-4">
                     <label className="block mb-2 text-sm font-medium text-gray-900">Question 1</label>
                     <input
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 sm:w-full p-2.5 m-5"
-                        type="text"
-                        placeholder="Enter Question 1"
-                        value={question1}
-                        onChange={(e) => setQuestion1(e.target.value)}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    type="text"
+                    placeholder="Enter Question 1"
+                    value={question1}
+                    onChange={(e) => setQuestion1(e.target.value)}
                     />
                 </div>
-                <div>
+                <div className="w-full mb-4">
                     <label className="block mb-2 text-sm font-medium text-gray-900">Question 2</label>
                     <input
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 sm:w-full p-2.5 m-5"
-                        type="text"
-                        placeholder="Enter Question 2"
-                        value={question2}
-                        onChange={(e) => setQuestion2(e.target.value)}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    type="text"
+                    placeholder="Enter Question 2"
+                    value={question2}
+                    onChange={(e) => setQuestion2(e.target.value)}
                     />
                 </div>
 
                 <button
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center"
+                    className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-50"
                     type="submit"
-                    disabled={loading} // Disable button during loading
+                    disabled={loading}
                 >
                     {loading ? 'Predicting...' : 'Predict'}
                 </button>
             </form>
+
 
             {isClicked && prediction !== null && (
                 <h2 className="text-center text-lg font-bold m-5">
