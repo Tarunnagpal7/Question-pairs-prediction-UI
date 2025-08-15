@@ -21,7 +21,7 @@ This is the frontend of the **Duplicate Question Pairs Predictor** project. It i
 - **Tailwind CSS**: For styling and responsive design.
 
 ---
-
+## Backebd : https://github.com/Tarunnagpal7/Question-pairs-prediction-Backend
 ## Installation and Setup
 
 ### Prerequisites
